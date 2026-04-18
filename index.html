@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinícius Fonseca — Desenvolvedor Fullstack</title>
+  <meta name="description" content="Portfolio de Vinícius Fonseca, Desenvolvedor Fullstack especializado em Java, Spring, React e muito mais." />
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Devicons for tech icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Font Awesome for contact/social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== CURSOR ===================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link" data-label="01">Início</a></li>
+        <li><a href="#about" class="nav-link" data-label="02">Sobre</a></li>
+        <li><a href="#tech" class="nav-link" data-label="03">Tecnologias</a></li>
+        <li><a href="#projects" class="nav-link" data-label="04">Projetos</a></li>
+        <li><a href="#contact" class="nav-link" data-label="05">Contato</a></li>
+      </ul>
+
+      <!-- Hamburger menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-links">
+      <li><a href="#home" class="mobile-link">Início</a></li>
+      <li><a href="#about" class="mobile-link">Sobre</a></li>
+      <li><a href="#tech" class="mobile-link">Tecnologias</a></li>
+      <li><a href="#projects" class="mobile-link">Projetos</a></li>
+      <li><a href="#contact" class="mobile-link">Contato</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <!-- Background grid effect -->
+      <div class="hero-grid"></div>
+      <!-- Glowing orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+
+      <div class="hero-container">
+        <div class="hero-text">
+          <p class="hero-greeting reveal-up">Olá, mundo! 👋</p>
+          <h1 class="hero-name reveal-up">
+            Vinícius<br />
+            <span class="name-highlight">Fonseca</span>
+          </h1>
+          <div class="hero-title-wrapper reveal-up">
+            <span class="title-line"></span>
+            <p class="hero-title">Desenvolvedor <span class="typed-text" id="typedText"></span></p>
+          </div>
+          <p class="hero-phrase reveal-up">
+            Transformo ideias complexas em sistemas robustos e interfaces que encantam.
+            Do backend ao frontend, entrego código que <em>importa</em>.
+          </p>
+          <div class="hero-actions reveal-up">
+            <a href="#projects" class="btn btn-primary">
+              <span>Ver Projetos</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost">Fale comigo</a>
+          </div>
+        </div>
+
+        <div class="hero-image reveal-right">
+          <div class="photo-wrapper">
+            <div class="photo-border"></div>
+            <!-- Substituir src pela sua foto real -->
+            <img src="minha-foto.jpg" alt="Vinícius Fonseca" class="profile-photo" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo')" />
+            <div class="photo-placeholder">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-dot"></div>
+            <span>Disponível para projetos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MIM ===================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span>02 — Sobre Mim</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <h2 class="section-title">
+              Código limpo,<br />
+              <span class="gradient-text">soluções reais.</span>
+            </h2>
+            <p class="about-desc">
+              Sou um desenvolvedor fullstack apaixonado por criar sistemas que funcionam de verdade.
+              Com sólida base em <strong>Java</strong> e <strong>Spring</strong> no backend, e domínio de <strong>React</strong>
+              no frontend, construo aplicações completas — do banco de dados à interface.
+            </p>
+            <p class="about-desc">
+              Acredito que bom software é aquele que resolve problemas com elegância: código bem arquitetado,
+              APIs bem documentadas e UIs que fazem sentido para quem usa. Boas práticas não são opcionais — são o padrão.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Projetos entregues</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Anos de experiência</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Tecnologias dominadas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual reveal-right">
+            <div class="code-card glass-card">
+              <div class="code-header">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span class="code-filename">Vinicius.java</span>
+              </div>
+              <pre class="code-body"><code><span class="c-keyword">public class</span> <span class="c-class">Vinicius</span> {
+
+  <span class="c-keyword">private</span> String role = <span class="c-string">"Fullstack Dev"</span>;
+  <span class="c-keyword">private</span> String[] stack = {
+    <span class="c-string">"Java"</span>, <span class="c-string">"Spring"</span>,
+    <span class="c-string">"React"</span>, <span class="c-string">"Docker"</span>
+  };
+
+  <span class="c-keyword">public</span> String getPhilosophy() {
+    <span class="c-keyword">return</span> <span class="c-string">"Clean code, real impact"</span>;
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TECNOLOGIAS ===================== -->
+    <section class="tech" id="tech">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span>03 — Tecnologias</span>
+        </div>
+        <h2 class="section-title centered reveal-up">
+          Minha <span class="gradient-text">Stack</span>
+        </h2>
+        <p class="section-subtitle reveal-up">Ferramentas que uso para construir do zero ao deploy</p>
+
+        <!-- Backend -->
+        <div class="tech-category reveal-up">
+          <div class="category-header">
+            <span class="category-tag">Backend</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-card" data-delay="0">
+              <div class="tech-icon-wrap">
+                <i class="devicon-java-plain colored"></i>
+              </div>
+              <span class="tech-name">Java</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="100">
+              <div class="tech-icon-wrap">
+                <i class="devicon-spring-plain colored"></i>
+              </div>
+              <span class="tech-name">Spring</span>
+              <div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="tech-category reveal-up">
+          <div class="category-header">
+            <span class="category-tag">Frontend</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-card" data-delay="0">
+              <div class="tech-icon-wrap">
+                <i class="devicon-react-original colored"></i>
+              </div>
+              <span class="tech-name">React</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="100">
+              <div class="tech-icon-wrap">
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+              <span class="tech-name">JavaScript</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="200">
+              <div class="tech-icon-wrap">
+                <i class="devicon-html5-plain colored"></i>
+              </div>
+              <span class="tech-name">HTML5</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="300">
+              <div class="tech-icon-wrap">
+                <i class="devicon-css3-plain colored"></i>
+              </div>
+              <span class="tech-name">CSS3</span>
+              <div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banco de Dados -->
+        <div class="tech-category reveal-up">
+          <div class="category-header">
+            <span class="category-tag">Banco de Dados</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-card" data-delay="0">
+              <div class="tech-icon-wrap">
+                <i class="devicon-postgresql-plain colored"></i>
+              </div>
+              <span class="tech-name">PostgreSQL</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="100">
+              <div class="tech-icon-wrap">
+                <i class="devicon-mysql-plain colored"></i>
+              </div>
+              <span class="tech-name">MySQL</span>
+              <div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps & Ferramentas -->
+        <div class="tech-category reveal-up">
+          <div class="category-header">
+            <span class="category-tag">DevOps &amp; Ferramentas</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="tech-grid tools-grid">
+            <div class="tech-card" data-delay="0">
+              <div class="tech-icon-wrap">
+                <i class="devicon-git-plain colored"></i>
+              </div>
+              <span class="tech-name">Git</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="80">
+              <div class="tech-icon-wrap">
+                <i class="devicon-github-original"></i>
+              </div>
+              <span class="tech-name">GitHub</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="160">
+              <div class="tech-icon-wrap">
+                <i class="devicon-docker-plain colored"></i>
+              </div>
+              <span class="tech-name">Docker</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="240">
+              <div class="tech-icon-wrap">
+                <i class="devicon-postman-plain colored"></i>
+              </div>
+              <span class="tech-name">Postman</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="320">
+              <div class="tech-icon-wrap">
+                <i class="devicon-maven-plain colored"></i>
+              </div>
+              <span class="tech-name">Maven</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="400">
+              <div class="tech-icon-wrap">
+                <i class="devicon-vscode-plain colored"></i>
+              </div>
+              <span class="tech-name">VS Code</span>
+              <div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" data-delay="480">
+              <div class="tech-icon-wrap">
+                <i class="devicon-intellij-plain colored"></i>
+              </div>
+              <span class="tech-name">IntelliJ</span>
+              <div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span>04 — Projetos</span>
+        </div>
+        <h2 class="section-title centered reveal-up">
+          O que <span class="gradient-text">construí</span>
+        </h2>
+        <p class="section-subtitle reveal-up">Projetos reais que demonstram domínio técnico e boas práticas</p>
+
+        <!-- ---- APIs ---- -->
+        <div class="projects-block reveal-up">
+          <div class="projects-block-header">
+            <div class="block-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="block-title">APIs <span class="gradient-text">Backend</span></h3>
+            <div class="block-line"></div>
+          </div>
+
+          <div class="api-grid">
+
+            <!-- API 1 -->
+            <article class="project-card api-card reveal-up">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-icon-wrap">
+                    <i class="fa-solid fa-file-contract"></i>
+                  </div>
+                  <div class="card-links">
+                    <a href="https://github.com/viniciusfonseca19/api-subscription-system.git" target="_blank" rel="noopener noreferrer" class="icon-link" title="Ver Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+                <h4 class="card-title">API de Sistema de Assinaturas</h4>
+                <p class="card-desc">
+                  Sistema completo de gerenciamento de assinaturas com controle de planos, ciclos de cobrança e autenticação de usuários.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring</span>
+                  <span class="tag">Maven</span>
+                  <span class="tag">Postgres</span>
+                </div>
+                <a href="https://github.com/viniciusfonseca19/api-subscription-system.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Ver Repositório</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- API 2 -->
+            <article class="project-card api-card reveal-up">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-icon-wrap">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div class="card-links">
+                    <a href="https://github.com/viniciusfonseca19/api-bank-system.git" target="_blank" rel="noopener noreferrer" class="icon-link" title="Ver Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+                <h4 class="card-title">API de Sistema Bancário</h4>
+                <p class="card-desc">
+                  API para operações bancárias: criação de contas, transferências, depósitos e extrato com regras de negócio robustas.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Maven</span>
+                </div>
+                <a href="https://github.com/viniciusfonseca19/api-bank-system.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Ver Repositório</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- API 3 -->
+            <article class="project-card api-card reveal-up">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-icon-wrap">
+                    <i class="fa-solid fa-sitemap"></i>
+                  </div>
+                  <div class="card-links">
+                    <a href="https://github.com/viniciusfonseca19/process-management-api.git" target="_blank" rel="noopener noreferrer" class="icon-link" title="Ver Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+                <h4 class="card-title">API de Gerenciamento de Processos e Usuários</h4>
+                <p class="card-desc">
+                  Sistema de gestão de processos e usuários com autenticação via Spring Security, arquitetura limpa e containerização Docker.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring Security</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag tag-highlight">Clean Arch</span>
+                </div>
+                <a href="https://github.com/viniciusfonseca19/process-management-api.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Ver Repositório</span>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ---- FULLSTACK ---- -->
+        <div class="projects-block reveal-up">
+          <div class="projects-block-header">
+            <div class="block-icon block-icon-alt">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="block-title">Projetos <span class="gradient-text">Fullstack</span></h3>
+            <div class="block-line"></div>
+          </div>
+
+          <div class="fullstack-grid">
+
+            <!-- Fullstack 1: SchoolFlow -->
+            <article class="project-card fullstack-card reveal-up">
+              <div class="card-image-wrap">
+                <!-- Substituir src pela imagem real do projeto -->
+                <img src="images/school-flow.png" alt="SchoolFlow" class="card-image" onerror="this.parentElement.classList.add('no-img')" />
+                <div class="card-image-placeholder">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>SchoolFlow</span>
+                </div>
+                <div class="card-image-overlay"></div>
+                <div class="card-image-tags">
+                  <span class="tag">Fullstack</span>
+                </div>
+              </div>
+              <div class="card-inner">
+                <h4 class="card-title">SchoolFlow</h4>
+                <p class="card-desc">
+                  Plataforma educacional completa para gestão escolar: alunos, turmas, professores e frequência em uma única solução integrada.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring</span>
+                  <span class="tag">Postgres</span>
+                  <span class="tag">Docker</span>
+                </div>
+                <div class="card-actions">
+                  <a href="https://github.com/viniciusfonseca19/school-flow.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Repositório</span>
+                  </a>
+                  <a href="https://school-flow-frontend-mg1g.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Ver Deploy</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Fullstack 2: BarberElite -->
+            <article class="project-card fullstack-card reveal-up">
+              <div class="card-image-wrap">
+                <!-- Substituir src pela imagem real do projeto -->
+                <img src="images/barber-elite.png" alt="BarberElite" class="card-image" onerror="this.parentElement.classList.add('no-img')" />
+                <div class="card-image-placeholder">
+                  <i class="fa-solid fa-scissors"></i>
+                  <span>BarberElite</span>
+                </div>
+                <div class="card-image-overlay"></div>
+                <div class="card-image-tags">
+                  <span class="tag">Fullstack</span>
+                </div>
+              </div>
+              <div class="card-inner">
+                <h4 class="card-title">BarberElite</h4>
+                <p class="card-desc">
+                  Sistema de agendamento para barbearias com painel administrativo, gerenciamento de horários e clientes em tempo real.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring</span>
+                  <span class="tag">Postgres</span>
+                  <span class="tag">Docker</span>
+                </div>
+                <div class="card-actions">
+                  <a href="https://github.com/viniciusfonseca19/barber-elite.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Repositório</span>
+                  </a>
+                  <a href="https://barber-elite-eight.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Ver Deploy</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section class="contact" id="contact">
+      <!-- Decorative elements -->
+      <div class="contact-orb contact-orb-1"></div>
+      <div class="contact-orb contact-orb-2"></div>
+
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span>05 — Contato</span>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-text reveal-up">
+            <h2 class="section-title">
+              Vamos <span class="gradient-text">construir</span><br />
+              algo juntos?
+            </h2>
+            <p class="contact-desc">
+              Estou disponível para projetos freelance, oportunidades CLT/PJ e colaborações.
+              Se você tem uma ideia ou uma vaga, me chama!
+            </p>
+          </div>
+
+          <div class="contact-links reveal-up">
+            <a href="https://github.com/viniciusfonseca19" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">@viniciusfonseca19</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+            </a>
+
+            <!-- Substituir SEUHREF pelo link do LinkedIn -->
+            <a href="hhttps://www.linkedin.com/in/vin%C3%ADcius-fonseca-026536327/" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">Vinícius Fonseca</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+            </a>
+
+            <!-- Substituir pelo seu email real -->
+            <a href="mailto:vinifonsecadev@email.com" class="contact-card">
+              <div class="contact-card-icon email">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">Enviar mensagem</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>VF<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">
+          Feito com <span class="heart">♥</span> por Vinícius Fonseca
+        </p>
+        <p class="footer-copy">© 2025 — Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
